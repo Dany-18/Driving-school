@@ -2,106 +2,178 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Deepa Two Wheeler Training</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      background: #f0f8ff;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fefefe;
       color: #333;
     }
+
     header {
-      background: #ff4081;
-      color: white;
-      padding: 1.5rem;
+      background-image: url('https://images.unsplash.com/photo-1607703705541-0a1127653bd3');
+      background-size: cover;
+      background-position: center;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    header h1 {
+      color: #fff;
+      font-size: 3rem;
+      z-index: 1;
       text-align: center;
     }
+
+    nav {
+      background-color: #ff4081;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+
     section {
-      padding: 2rem;
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
     }
-    .services, .contact {
-      background: #fff;
-      margin: 1rem auto;
-      padding: 1.5rem;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #ff4081;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+
+    .service {
+      background-color: #fff;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      max-width: 800px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      transition: 0.3s;
     }
-    .services ul {
-      list-style: none;
-      padding-left: 0;
+
+    .service:hover {
+      transform: translateY(-5px);
     }
-    .services li {
-      padding: 0.5rem 0;
-    }
+
     .contact form {
       display: flex;
       flex-direction: column;
+      gap: 1rem;
     }
+
     .contact input, .contact textarea {
-      margin-bottom: 1rem;
       padding: 0.8rem;
-      border-radius: 5px;
       border: 1px solid #ccc;
+      border-radius: 5px;
     }
+
     .contact button {
-      background: #ff4081;
-      color: white;
       padding: 1rem;
+      background-color: #ff4081;
+      color: white;
       border: none;
+      font-size: 1rem;
       border-radius: 5px;
       cursor: pointer;
+      transition: background-color 0.3s ease;
     }
+
+    .contact button:hover {
+      background-color: #e63370;
+    }
+
     .footer {
       text-align: center;
-      padding: 1rem;
-      background: #eee;
-      font-size: 0.9rem;
+      padding: 2rem 1rem;
+      background-color: #f1f1f1;
+      color: #555;
     }
-    img.hero {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-      display: block;
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+        padding: 0 1rem;
+      }
     }
   </style>
 </head>
 <body>
+
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <header>
     <h1>Deepa Two Wheeler Training</h1>
-    <p>Empowering riders in Thoothukudi, Tamil Nadu</p>
   </header>
 
-  <img src="https://images.unsplash.com/photo-1607703705541-0a1127653bd3" class="hero" alt="Scooter Training" />
-
-  <section class="services">
+  <section id="services">
     <h2>Our Services</h2>
-    <ul>
-      <li>✅ Two-Wheeler (Scooty & Bike) Training</li>
-      <li>✅ Women-Friendly Coaching</li>
-      <li>✅ Pick-up & Drop Facility</li>
-      <li>✅ Driving License Assistance</li>
-      <li>✅ Affordable Fees & Flexible Timings</li>
-    </ul>
+    <div class="services">
+      <div class="service">🛵 Two-Wheeler (Scooty & Bike) Training</div>
+      <div class="service">👩‍🏫 Women-Friendly Coaching</div>
+      <div class="service">🚗 Pick-up & Drop Facility</div>
+      <div class="service">📜 Driving License Assistance</div>
+      <div class="service">💸 Affordable Fees</div>
+      <div class="service">⏰ Flexible Timings</div>
+    </div>
   </section>
 
-  <section class="contact">
+  <section id="contact" class="contact">
     <h2>Contact Us</h2>
     <form action="mailto:antonydany938@gmail.com" method="POST" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
-    <p><strong>Call/WhatsApp:</strong> 9952844650 / 9360341977</p>
-    <p><strong>Location:</strong> Thoothukudi, Tamil Nadu</p>
+    <p style="text-align:center; margin-top:2rem;">
+      📞 Call/WhatsApp: 9952844650 / 9360341977<br>
+      📍 Thoothukudi, Tamil Nadu
+    </p>
   </section>
 
   <div class="footer">
     &copy; 2025 Deepa Two Wheeler Training. All rights reserved.
   </div>
+
 </body>
 </html>
+
 
