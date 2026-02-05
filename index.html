@@ -47,9 +47,10 @@ header{
   height:100vh;
   background:
   linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
-  url('https://images.unsplash.com/photo-1597002974112-6a2c8b4f9c4e');
+  url('https://images.unsplash.com/photo-1621847468516-1c6a2bff7e94');
+  /* Image shows woman helping another woman ride scooter */
   background-size:cover;
-  background-position:center 30%;
+  background-position:center 35%;
   background-repeat:no-repeat;
   display:flex;
   justify-content:center;
@@ -58,6 +59,7 @@ header{
   color:white;
   padding:20px;
 }
+
 header h1{
   font-size:3.2rem;
 }
@@ -195,8 +197,8 @@ header p{font-size:1rem;}
 <a class="btn" href="https://wa.me/919952844650">💬 WhatsApp</a>
 
 <p style="margin-top:20px;">
-Email: <b>antonydany938@gmail.com</b><br>
-Alt Email: <b>antonydanygg@gmail.com</b>
+Email: <b>antonydanygg@gmail.com</b><br>
+Alt Email: <b>antonydany938@gmail.com</b>
 </p>
 </div>
 </section>
@@ -206,10 +208,8 @@ Alt Email: <b>antonydanygg@gmail.com</b>
 </footer>
 
 <script>
-// Dynamic Year
 document.getElementById("year").innerHTML = new Date().getFullYear();
 
-// Fade Animation on Scroll
 const faders = document.querySelectorAll('.fade');
 window.addEventListener('scroll', () => {
   faders.forEach(el => {
